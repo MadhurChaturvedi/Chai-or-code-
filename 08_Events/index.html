@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        width: 100vw;
+        height: 100vh;
+        background: rgb(47, 48, 48);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: auto;
+        height: 40%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+        font-family: monospace;
+      }
+      .image-box ul {
+        display: flex;
+        gap: 5px;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box">
+        <h2>Amazing Image</h2>
+        <div class="image-box">
+          <ul id="images">
+            <li>
+              <img
+                width="200px"
+                src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="japan"
+                id="city"
+              />
+            </li>
+            <li>
+              <img
+                width="200px"
+                src="https://images.unsplash.com/photo-1464660756002-dd9f9a92b01b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YW1lcmljYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt="america"
+                id="flag"
+              />
+            </li>
+            <li>
+              <img
+                width="200px"
+                src="https://plus.unsplash.com/premium_photo-1661963646501-7c2818380948?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDF8fGluZGlhfGVufDB8fDB8fHww"
+                alt="india"
+                id="tample"
+              />
+            </li>
+            
+               
+          
+          </ul>
+          <div>
+            <a href="https://www.google.co.in/" id="google">google</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+        //  attachEvent()
+    //  Jquery = on 
+
+
+    //   type , timestamp ,defaultPrevented
+      // target , toElement ,srcElement , cureentTargey,
+      // clintX, clientY , screenX , screenY
+    //   altkey , ctrlkey ,shiftkey ,KeyCode
+    -->
+    <script>
+    //   document.getElementById("images").addEventListener(
+    //     "click",
+    //     function (e) {
+    //       alert("clicked in the ul");
+    //     },
+    //     false
+    //   );
+    //   document.getElementById("flag").addEventListener(
+    //     "click",
+    //     function (e) {
+    //       alert("Flag clicked");
+    //       e.stopPropagation()
+    //     },
+    //     false
+    //   );
+    //   document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("Google clicked");
+        
+    //   },false)
+    document.querySelector("#images").addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        let removeIt = e.target.parentNode
+        removeIt.remove()
+    },false)
+    </script>
+  </body>
+</html>

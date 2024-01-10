@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom | chai or code</title>
+  </head>
+  <body style="background: #212121; color: #fff"></body>
+  <script>
+    const div = document.createElement("div");
+    console.log(div);
+
+    div.className = "main";
+    div.id = Math.round(Math.random() * 10 + 1);
+    div.setAttribute("title", "generated title");
+    div.style.background = "green";
+    div.style.padding = "12px";
+    // div.innerText = "Chai or code"
+    const addtext = document.createTextNode("chai aur code");
+    div.appendChild(addtext);
+
+    document.body.appendChild(div);
+  </script>
+</html>

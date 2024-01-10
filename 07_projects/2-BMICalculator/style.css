@@ -1,0 +1,28 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body 
+{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(206, 221, 212);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box
+{
+    width: 50%;
+    height: auto;
+    background-color: #FFF;
+    padding: 15px;
+}
+
+.head
+{
+  font-weight:700;
+  text-align: center;
+   
+}

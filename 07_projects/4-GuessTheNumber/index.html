@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .main
+        {
+            width: 100vw;
+            height: 100vh;
+            background: darkslategray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .guessSubmit
+        {
+            width: 150px;
+            height: 25px;
+            border: none;
+            border-radius: 15px;
+            background: orange;
+            color: #FFFF;
+            font-size:medium;
+            transition: 0.3s;
+
+        }
+        .guessSubmit:hover
+        {
+            width: 150px;
+            height: 25px;
+            border: none;
+            border-radius: 15px;
+            background: orange;
+            color: #ad0000ff;
+            font-size:medium;
+            transition: 0.3s;
+        }
+        .guessSubmit:active
+        {
+            width: 150px;
+            height: 25px;
+            border: none;
+            border-radius: 15px;
+            background: orange;
+            color: #FFFF;
+            font-size:medium;
+            opacity: 0.5;
+            transition: 0.3s;
+
+        }
+        #wrapper
+        {
+            padding: 15px;
+            width: 50%;
+            height: auto;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            border-radius: 15px;
+            letter-spacing: 1px;
+        }
+        @media screen and (max-width:800px) {
+            #wrapper
+            {
+                gap:15px
+            }
+            .fum
+            {
+                padding-bottom: 5px;
+            }
+        }
+        </style>
+</head>
+<body>
+    <div class="main">
+
+  
+    <div id="wrapper">
+     <h1>Number Gussing game</h1>
+     <p>try guss redom number between 1 and 10</p>
+     <p>You have 10 attempts to guess the right number</p>
+     <br>
+     <form style="display: flex; flex-direction: column; ">
+        <label2 for="guessField" id="guess">Guess a Number</label>
+        <input type="text" id="guessField" class="guessField">
+        <input type="submit" id="subt" value="Submit Guess" class="guessSubmit">
+     </form>   
+     <div class="resultParas">
+        <p>Previous Guesses: <span class="guesses"></span></p>
+        <p>Previous Remaining: <span class="lastResult">10</span></p>
+        <p class="lowOrHi"></p>
+     </div>
+    </div>
+</div>
+    <script src="ap.js"></script>
+</body>
+</html>

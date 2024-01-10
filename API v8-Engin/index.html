@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    style="
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 10rem;
+    "
+  ></body>
+  <script>
+    const reqURL = "https://api.github.com/users/MadhurChaturvedi";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", reqURL);
+    // console.log("Here");
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+
+      if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText);
+        console.log(typeof data);
+        const para = document.createElement("div");
+        var x = document.createElement("IMG");
+        x.style.borderRadius = "20px";
+        para.innerText = data.following;
+
+        document.body.appendChild(para);
+
+        para.style.border = "1px solid black";
+        para.style.padding = "3rem";
+      }
+    };
+
+    xhr.send();
+  </script>
+</html>
