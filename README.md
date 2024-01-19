@@ -10,3 +10,5 @@
     <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/121-css3-512.png" alt="angular" width="40" height="40"/> 
    
 </p>  
+
+<p>JavaScript practice question along with a possible solution. You can use this as a template and create more questions and solutions for your practice.</p>
